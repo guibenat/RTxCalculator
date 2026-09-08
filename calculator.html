@@ -1,102 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Render TracerX Calculator</title>
-    <link rel="stylesheet" href="style/style.css">
-    
-</head>
-<body>
-
-   <head>
-    <nav>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <head>
+      <nav>
         <h1>Diagnóstico financeiro</h1>
-        <img src="" alt="Logo Render TracerX">
-    </nav>
-   </head>
+        <img src="" alt="Logo Render TracerX" />
+      </nav>
+    </head>
 
-   <div class="container">
-    <div class="left">
+    <div class="container">
+      <div class="left">
         <form>
-            <label for="ipt_insumo">Insumo Processado(KG/MÊS)</label>
-            <input type="text" id="ipt_insumo" placeholder="ex: 60.000">
+          <label for="ipt_insumo">Insumo Processado(KG/MÊS)</label>
+          <input type="text" id="ipt_insumo" placeholder="ex: 60.000" />
 
-            <label for="ipt_rendimento">Rendimento do processo(%)</label>
-            <input type="text" id="ipt_rendimento" placeholder="ex: 43,5%">
+          <label for="ipt_rendimento">Rendimento do processo(%)</label>
+          <input type="text" id="ipt_rendimento" placeholder="ex: 43,5%" />
 
-            <label for="ipt_perdaTransbordo">Perda por transbordo(%)</label>
-            <input type="text" id="ipt_perdaTransbordo" placeholder="ex: 5%">
+          <label for="ipt_perdaTransbordo">Perda por transbordo(%)</label>
+          <input type="text" id="ipt_perdaTransbordo" placeholder="ex: 5%" />
 
-            <label for="ipt_valorProd">Valor do produto(R$/KG)</label>
-            <input type="text" id="ipt_valorProd" placeholder="ex: 2,50">
+          <label for="ipt_valorProd">Valor do produto(R$/KG)</label>
+          <input type="text" id="ipt_valorProd" placeholder="ex: 2,50" />
 
-            <label for="ipt_horasParadas">Horas paradas por Mês</label>
-            <input type="text" id="ipt_horasParadas" placeholder="ex: 6">
+          <label for="ipt_horasParadas">Horas paradas por Mês</label>
+          <input type="text" id="ipt_horasParadas" placeholder="ex: 6" />
 
-            <label for="ipt_custoHorasParadas">Custo hora</label>
-            <input type="text" id="ipt_custoHorasParadas" placeholder="ex: 1200">
+          <label for="ipt_custoHorasParadas">Custo hora</label>
+          <input type="text" id="ipt_custoHorasParadas" placeholder="ex: 1200"/>
 
-            <button onclick="simular()">Simular Diagnóstico</button>
+          <button onclick="simular()">Simular Diagnóstico</button>
         </form>
-    </div>
+      </div>
 
-    <div class="right">
+      <div class="right">
         <div class="prejuizo">
-            <h3>Prejuizo estimado sem nossos serviços</h3>
-            <h2 id="h2_prejuizo_anual"></h2><p>/ano</p>
+          <h3>Prejuizo estimado sem nossos serviços</h3>
+          <h2 id="h2_prejuizo_anual"></h2>
+          <p>/ano</p>
         </div>
 
         <div class="detalhamento-container">
-            <h5>DETALHAMENTO DAS PERDAS ATUAIS</h5> 
-            <div class="container-cards-detalhamento">
-                <div class="card">
-                    <p>MASSA PERDIDA</p>
-                    <p id="p_massaperdida"></p>
-                </div>
-                <div class="card">
-                    <p>PRODUTO NÃO GERADO</p>
-                    <p id="p_produtoNaoGerado"></p>
-                </div>
-                <div class="card">
-                    <p>PERDA P/ TRANSBORDO</p>
-                    <p id="p_perdaPorTransbordo"></p>
-                </div>
-                <div class="card">
-                    <p>PERDA P/ PARADA(DOWNTIME)</p>
-                    <p id="p_perdaPorParada"></p>
-                </div>
+          <h5>DETALHAMENTO DAS PERDAS ATUAIS</h5>
+          <div class="container-cards-detalhamento">
+            <div class="card">
+              <p>MASSA PERDIDA</p>
+              <p id="p_massaperdida"></p>
             </div>
+            <div class="card">
+              <p>PRODUTO NÃO GERADO</p>
+              <p id="p_produtoNaoGerado"></p>
+            </div>
+            <div class="card">
+              <p>PERDA P/ TRANSBORDO</p>
+              <p id="p_perdaPorTransbordo"></p>
+            </div>
+            <div class="card">
+              <p>PERDA P/ PARADA(DOWNTIME)</p>
+              <p id="p_perdaPorParada"></p>
+            </div>
+          </div>
         </div>
 
         <div class="container_retorno">
-            <h5>RETORNO COM A RENDER TRACE CO.</h5>
-            <div class="card">
-                    <p>RECUPERAÇÃO DIRETA</p>
-                    <p id="p_recuperacaoDireta"></p>
-                </div>
-                <div class="card">
-                    <p>GANHO INDIRETO</p>
-                    <p id="p_ganhoIndireto"></p>
-                </div>
-                <div class="banner-recuperacao">
-                    <h3>VALOR RECUPERADO POR ANO</h3>
-                    <h1>R$</h1> <h1 id="h1_recuperadoPorAno"></h1>
-                </div>
+          <h5>RETORNO COM A RENDER TRACEX CO.</h5>
+          <div class="card">
+            <p>RECUPERAÇÃO DIRETA</p>
+            <p id="p_recuperacaoDireta"></p>
+          </div>
+          <div class="card">
+            <p>GANHO INDIRETO</p>
+            <p id="p_ganhoIndireto"></p>
+          </div>
+          <div class="banner-recuperacao">
+            <h3>VALOR RECUPERADO POR ANO</h3>
+            <h1>R$</h1>
+            <h1 id="h1_recuperadoPorAno"></h1>
+          </div>
         </div>
-        
-        
 
-
+        <div class="projecao">
+          <h5>PROJEÇÃO DE ECONOMIA</h5>
+          <div class="card">
+            <p>ECONOMIA EM UM ANO</p>
+            <p id="p_econimaUmAno"></p>
+          </div>
+          <div class="card">
+            <p>ECONOMIA EM 3 ANOS</p>
+            <p id="p_economiaTresAnos"></p>
+          </div>
+        </div>
+      </div>
     </div>
 
-   </div>
-
-
-
-    
-    <script src="js/calculator.js">
-
-    </script>
-</body>
+    <script src="js/calculator.js"></script>
+  </body>
 </html>
