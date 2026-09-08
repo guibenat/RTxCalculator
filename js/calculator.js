@@ -8,27 +8,39 @@ function simular() {
     let custoHoraParada = Number(ipt_custoHoraParada.value)
 
     // Calculos
-    massaPerdida = insumo * (perda / 100);
+    let massaPerdida = insumo * (perda / 100);
 
-    produtoNaoGerado = massaPerdia * (rendimento /100)
+    let produtoNaoGerado = massaPerdia * (rendimento /100)
 
-    prejuizoTransbordo = produtoNaoGerado * valorProd
+    let prejuizoTransbordo = produtoNaoGerado * valorProd
 
-    prejuizoDowntime = horasParadas * custoHoraParada
+    let prejuizoDowntime = horasParadas * custoHoraParada
 
-    prejuizoMensal = prejuizoDowntime + perdaTransbordo
+    let prejuizoMensal = prejuizoDowntime + perdaTransbordo
 
-    prejuizoAnual = PrejuizoMensal * 12
+    let prejuizoAnual = PrejuizoMensal * 12
 
-    ganhoDireto = prejuizoAnual * 0.85;
+    let ganhoDireto = prejuizoAnual * 0.85;
     
 
     // Projeções
 
-    ano1 = valorTotal;
-    ano3 = valorTotal * 3
+    let ano1 = valorTotal;
+    let ano3 = valorTotal * 3
 
     // Mostrar resultado
 
+    if (insumo > 0 && rendimento > 0 && perdaTransbordo > 0 && valorProd > 0 && horasParadas > 0 && custoHoraParada > 0) {
+        h2_prejuizo_anual.innerHTML = `${prejuizoAnual}`
+        p_massaPerdida.innerHTML = `${massaPerdida}`
+        p_produtoNaoGerado.innerHTML = `${produtoNaoGerado}`
+        p_prejuizoPorTransbordo.innerHTML = `${prejuizoTransbordo}`
+        p_prejuizoPorParada.innerHTML = `${prejuizoDowntime}`
+        p_ganhoDireto.innerHTML = `${ganhoDireto}`
 
+        p_economiaUmAno.innerHTMl = `${ano1}`
+        p_economiaTresAnos.innerHTMl = `${ano3}`
+    } else {
+        h2_prejuizo_anual.innerHTML = `Insira os valores corretamente`
+    }
 }
