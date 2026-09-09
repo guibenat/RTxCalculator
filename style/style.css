@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #1B4D3E;
+  color: #333;
+}
+
+/* Navbar */
+
+.header {
+  background-color: #1B4D3E;
+  padding: 20px 40px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav h1 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.nav img {
+  height: 75px;
+}
+
+.container {
+  display: flex;
+}
+
+/* Definição dos elementos laterais */
+
+.left {
+  width: 320px;          
+  height: 100vh;       
+  background-color: #1B4D3E;
+  padding: 20px 40px 40px 40px;
+}
+
+.right {
+  flex: 1;
+  background-color: #eef6e9;
+  padding: 40px 60px;
+}
+
+/* Estilização do formulário */
+
+.formulario label {
+  display: block;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.formulario button {
+  width: 100%;
+  padding: 16px;
+  background-color: #7ED957;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 40px;
+}
+
+/*Estilização da parte de prejuizo */
+
+.prejuizo {
+  background-color: #fb6a5c;
+  border: 3px solid #e63e2e;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  color: #591610;
+}
+
+.prejuizo h3 {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.prejuizo h2 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.prejuizo p {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+h5 {
+  color: #1B4D3E;
+  font-size: 13px;
+  font-weight: 800;
+  border-bottom: 2px solid #91b59c;
+  padding-right: 50px;
+  padding-bottom: 6px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.card {
+  border-radius: 8px;
+  padding: 18px 20px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Organiza os cards e container */
+
+.card p:first-child {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.card p:last-child {
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: auto;
+}
+
+.container-cards-detalhamento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.detalhamento-container .card {
+  border: 2px solid #ef9a8d;
+  color: #f08373;
+  background-color: #f7ede8;
+}
+
+.container_retorno, .projecao {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.container_retorno h5, 
+.container_retorno .banner-recuperacao,
+.projecao h5 {
+  grid-column: span 2;
+}
+
+.container_retorno .card, 
+.projecao .card {
+  border: 2px solid #91b59c;
+  color: #608269;
+  background-color: #e3efe4;
+}
+
+/* Estlização do banner de recuperação */
+.banner-recuperacao {
+  background-color: #1B4D3E;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.banner-recuperacao h3 {
+  color: #7ED957;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.banner-recuperacao h1 {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 800;
+  margin: 0 4px;
+}

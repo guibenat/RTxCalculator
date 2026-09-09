@@ -1,4 +1,5 @@
 function simular() {
+
     // Declarando Váriaveis
     let insumo = Number(ipt_insumo.value)
     let rendimento = Number(ipt_rendimento.value)
@@ -8,7 +9,6 @@ function simular() {
     let custoHoraParada = Number(ipt_custoHoraParada.value)
 
     // Calculos
-
     let massaPerdida = insumo * (perdaTransbordo / 100); 
 
     let produtoNaoGerado = massaPerdida * (rendimento / 100);
@@ -28,8 +28,7 @@ function simular() {
     let ano3 = ganhoDireto * 3;
 
 
-    // Mostrar resultado
-
+    // Mostrar resultados
     if (insumo > 0 && rendimento > 0 && perdaTransbordo > 0 && valorProd > 0 && horasParadas > 0 && custoHoraParada > 0) {
         h2_prejuizo_anual.innerHTML = prejuizoAnual.toFixed(2);
         p_massaPerdida.innerHTML = massaPerdida.toFixed(2);
