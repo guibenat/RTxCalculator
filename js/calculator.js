@@ -8,9 +8,9 @@ function simular() {
     let custoHoraParada = Number(ipt_custoHoraParada.value)
 
     // Calculos
-    let massaPerdida = insumo * (perda / 100);
+    let massaPerdida = insumo * (perdaTransbordo / 100);
 
-    let produtoNaoGerado = massaPerdia * (rendimento /100)
+    let produtoNaoGerado = massaPerdida * (rendimento /100)
 
     let prejuizoTransbordo = produtoNaoGerado * valorProd
 
@@ -37,9 +37,9 @@ function simular() {
         p_prejuizoPorTransbordo.innerHTML = `${prejuizoTransbordo}`
         p_prejuizoPorParada.innerHTML = `${prejuizoDowntime}`
         p_ganhoDireto.innerHTML = `${ganhoDireto}`
-
-        p_economiaUmAno.innerHTMl = `${ano1}`
-        p_economiaTresAnos.innerHTMl = `${ano3}`
+        h1_recuperadoPorAno.innerHTML = `${ganhoDireto}`
+        p_economiaUmAno.innerHTML = `${ano1}`
+        p_economiaTresAnos.innerHTML = `${ano3}`
     } else {
         h2_prejuizo_anual.innerHTML = `Insira os valores corretamente`
     }
